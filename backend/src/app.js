@@ -10,7 +10,7 @@ import userRoutes from "./routes/users.routes.js";
 
 
 
-import connectToSocket from "./controllers/socketManager.js";
+import {connectToSocket} from "./controllers/socketManager.js";
 
 const app = express();
 const server = createServer(app);
@@ -28,7 +28,7 @@ const start = async () => {
     const connectionDb = await mongoose.connect("mongodb+srv://rajkumarkathula15:rajkumar@zoomcluster.v6lgjzb.mongodb.net/");
     console.log(`MONGO connected DB Host: ${connectionDb.connection.host}`)
     server.listen(app.get("port"), () => {
-        console.log("LISTENIN ON PORT 8000")
+        console.log("LISTENING ON PORT 8000")
     });        
 
 }
